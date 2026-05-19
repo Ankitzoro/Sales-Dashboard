@@ -1,16 +1,56 @@
-# React + Vite
+# Sales Analytics Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-06B6D4?logo=tailwindcss)](https://tailwindcss.com/)
+[![Recharts](https://img.shields.io/badge/Recharts-2.12-22B5BF?logo=chartdotjs)](https://recharts.org/)
+[![Lucide](https://img.shields.io/badge/Lucide-React-00B4D8?logo=lucide)](https://lucide.dev/)
 
-Currently, two official plugins are available:
+Interactive sales analytics dashboard built with **React 19**, **Tailwind CSS v4**, **Lucide React** icons, and **Recharts**. Features region/team filtering, performance metrics, monthly trends, KPI cards, and dynamic data visualization.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Dashboard Preview](./screenshots/dashboard-desktop.png)
+**[Click here to view the live demo →](https://sales-dashboard-nine-plum.vercel.app)**
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **📍 Hierarchical Filtering** – Regions → Teams → Salespeople cascading filters
+- **📊 Interactive Charts** – Line charts for monthly trends, pie charts for product mix
+- **🎯 Performance Tracking** – Actual vs target metrics with visual indicators
+- **👥 Team & Rep Views** – Drill down into team performance and individual reps
+- **📈 KPI Dashboard** – Revenue, deals, win rates, average deal size, growth %
+- **🎨 Modern UI** – Dark theme with glow effects, smooth animations, responsive design
+- **📱 Fully Responsive** – Works on desktop, tablet, and mobile devices
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **React 19** | UI framework |
+| **Tailwind CSS v4** | Styling & theming |
+| **Lucide React** | Icon library |
+| **Recharts** | Charting library |
+| **Vite** | Build tool |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm / yarn / pnpm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Ankitzoro/Sales-Dashboard.git
+cd sales-analytics-dashboard
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
