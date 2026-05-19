@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* 1. Custom Theme Configuration (Replaces tailwind.config.js) */
+@theme {
+  --color-ink-950: #0a0a0c; /* Example hex: Replace with your actual ink-950 color */
+  --color-ink-900: #121214; /* Example hex: Replace with your actual ink-900 color */
+  --color-ink-800: #1a1a1e; /* Example hex: Replace with your actual ink-800 color */
+  --color-ink-700: #26262b; /* Example hex: Replace with your actual ink-700 color */
+  --color-ink-600: #3f3f46; /* Example hex: Replace with your actual ink-600 color */
+  --color-ink-500: #71717a; /* Example hex: Replace with your actual ink-500 color */
+  --color-coral: #ff7f50;
+  --color-acid: #c6f135;      /* Example hex: Replace with your actual acid color */
+  --color-acid-dark: #b1d82f; /* Example hex: Replace with your actual acid-dark color */
+  --color-amber-dash: #fbbf24;
+  --font-body: "Inter", sans-serif;    /* Replace with your actual font stack */
+  --font-display: "Lexend", sans-serif; /* Replace with your actual font stack */
+}
+
+/* 2. Base Styles (Standard CSS applies globally, no @layer base needed) */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-950 text-white font-body antialiased;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(198, 241, 53, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 80% 80%, rgba(56, 189, 248, 0.04) 0%, transparent 50%);
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ink-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-ink-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-ink-600;
+}
+
+/* 3. Component Utilities (Replaces @layer components with @utility) */
+@utility card {
+  @apply bg-ink-800 border border-ink-600 rounded-2xl;
+}
+
+@utility card-glow {
+  @apply card transition-all duration-300;
+  box-shadow: 0 0 0 0 transparent;
+  
+  &:hover {
+    box-shadow: 0 0 24px rgba(198, 241, 53, 0.06);
+    @apply border-ink-500;
+  }
+}
+
+@utility badge {
+  @apply font-mono text-xs px-2 py-0.5 rounded-full;
+}
+
+@utility btn {
+  @apply font-display font-semibold text-sm px-4 py-2 rounded-xl transition-all duration-200 cursor-pointer;
+}
+
+@utility btn-primary {
+  @apply btn bg-acid text-ink-950 hover:bg-acid-dark active:scale-95;
+}
+
+@utility btn-ghost {
+  @apply btn bg-transparent border border-ink-500 text-white hover:border-acid hover:text-acid active:scale-95;
+}
+
+@utility stat-number {
+  @apply font-display font-extrabold text-3xl tracking-tight;
+}
+
+@utility section-title {
+  @apply font-display font-bold text-lg text-white;
+}
+
+@utility label {
+  @apply font-body text-xs font-medium text-white/40 uppercase tracking-widest;
+}
+
+@utility tooltip-custom {
+  @apply bg-ink-700 border border-ink-500 rounded-xl p-3 shadow-2xl;
+}
+
+/* 4. Animations & Custom Helpers */
+@utility stagger-1 { animation-delay: 0.05s; }
+@utility stagger-2 { animation-delay: 0.1s; }
+@utility stagger-3 { animation-delay: 0.15s; }
+@utility stagger-4 { animation-delay: 0.2s; }
+@utility stagger-5 { animation-delay: 0.25s; }
+@utility stagger-6 { animation-delay: 0.3s; }
+
+@utility animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
