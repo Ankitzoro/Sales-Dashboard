@@ -7,7 +7,7 @@
 
 Interactive sales analytics dashboard built with **React 19**, **Tailwind CSS v4**, **Lucide React** icons, and **Recharts**. Features region/team filtering, performance metrics, monthly trends, KPI cards, and dynamic data visualization.
 
-![Dashboard Live Preview]([https://via.placeholder.com/800x400?text=Dashboard+Screenshot](https://sales-dashboard-nine-plum.vercel.app))
+![Dashboard Live Preview](https://sales-dashboard-nine-plum.vercel.app)
 
 ---
 
